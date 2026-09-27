@@ -23,8 +23,8 @@ Cada consigna está escrita para leerse sola, sin depender de haber escuchado la
    **el color de la tinta**:
    - **A** = azul · **N** = naranja · **B** = blanco
 6. Al terminar, buscá el archivo `.csv` que quedó en la carpeta
-   `data/`, al lado del script, y **subilo ya** a la carpeta compartida
-   (el link está en el pizarrón).
+   `data/`, al lado del script, y **subilo ya** a la tarea **Stroop de
+   la clase** del Classroom.
 
 Esos archivos son los datos que vamos a analizar mañana entre todxs.
 
@@ -320,10 +320,10 @@ habría que cambiar para que corra en un navegador.
    condiciones. Borrá la carpeta `data/` y cualquier `*_lastrun.py`.
 2. Renombrala `pareja_XX_variante` (el número de pareja está en el
    pizarrón).
-3. Comprimila en un `.zip` y subila a la carpeta compartida
-   **experimentos**.
-4. Creá, en la carpeta compartida **datos**, una carpeta con el mismo
-   nombre: ahí te van a dejar los CSV mañana.
+3. Comprimila en un `.zip` y subila a la carpeta **experimentos** del
+   Drive del curso (el link está en el pizarrón y en el Classroom).
+4. Creá, en la carpeta **datos** del mismo Drive, una carpeta con el
+   mismo nombre: ahí te van a dejar los CSV mañana.
 
 ## Parte C — Probar en limpio (10 min)
 

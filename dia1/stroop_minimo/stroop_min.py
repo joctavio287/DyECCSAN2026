@@ -55,7 +55,7 @@ INSTRUCTIONS = (
 
 GOODBYE = (
     "Listo, gracias.\n\n"
-    "Ahora subí a la carpeta compartida el .csv que quedó\n"
+    "Ahora subí a la tarea del Classroom el .csv que quedó\n"
     "en la carpeta data, al lado de este script.\n\n"
     "Presioná la barra espaciadora para salir."
 )
