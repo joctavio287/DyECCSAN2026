@@ -1,0 +1,5 @@
+estimulo,direccion,congruent,correct_key
+<<<<<,izquierda,1,z
+>>>>>,derecha,1,m
+>><>>,izquierda,0,z
+<<><<,derecha,0,m

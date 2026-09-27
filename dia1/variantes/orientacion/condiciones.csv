@@ -1,0 +1,7 @@
+orientacion,inclinacion,dificultad,correct_key
+10,derecha,facil,m
+-10,izquierda,facil,z
+5,derecha,media,m
+-5,izquierda,media,z
+2,derecha,dificil,m
+-2,izquierda,dificil,z

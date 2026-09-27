@@ -1,0 +1,5 @@
+color_nombre,color,pos_x,lado,congruent,correct_key
+azul,#0072B2,-0.3,izquierda,1,z
+azul,#0072B2,0.3,derecha,0,z
+naranja,#E69F00,0.3,derecha,1,m
+naranja,#E69F00,-0.3,izquierda,0,m
