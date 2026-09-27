@@ -9,8 +9,7 @@ la estructura estándar de PsychoPy que se estudia el día 2.
 La paleta es segura para daltonismo: azul, naranja y blanco sobre gris
 oscuro. La tríada clásica rojo/verde/azul es inservible para un
 deuteranope, que ve rojo y verde a distancia ΔE 10 en CIELAB; esta
-tríada se mantiene por encima de ΔE 55 en las tres dicromacias. Ver
-`docs/13_paleta_daltonismo.md`.
+tríada se mantiene por encima de ΔE 55 en las tres dicromacias.
 
 Se corre desde la ventana Coder de PsychoPy (botón Ejecutar) o desde
 una terminal cuyo entorno de Python tenga PsychoPy instalado::
@@ -56,7 +55,8 @@ INSTRUCTIONS = (
 
 GOODBYE = (
     "Listo, gracias.\n\n"
-    "Avisale al docente el nombre del archivo que quedó en data/raw.\n\n"
+    "Ahora subí a la carpeta compartida el .csv que quedó\n"
+    "en la carpeta data, al lado de este script.\n\n"
     "Presioná la barra espaciadora para salir."
 )
 
@@ -99,7 +99,7 @@ def collect_participant_info(experiment_name: str) -> dict:
 
 def build_output_stem(data_dir: Path, exp_info: dict) -> str:
     """
-    Arma el prefijo de ruta que comparten el .csv, el .psydat y el .log.
+    Arma el prefijo de ruta que comparten el .csv y el .psydat.
 
     Parameters
     ----------

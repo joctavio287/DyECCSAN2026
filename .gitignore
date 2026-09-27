@@ -6,6 +6,8 @@ data/
 *.psydat
 *.log
 *_lastrun.py
+dia2/analisis/datos_clase/*.csv
+dia2/analisis/figuras/
 __pycache__/
 .DS_Store
 Thumbs.db
