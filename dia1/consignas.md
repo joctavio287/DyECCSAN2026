@@ -20,7 +20,7 @@ Cada consigna está escrita para leerse sola, sin depender de haber escuchado la
 4. En el diálogo, en `participant` poné el código que te dimos al
    entrar (`sub-01`, `sub-02`…). **No pongas tu nombre.**
 5. Hacé la tarea: aparece una palabra escrita en un color y respondés
-   **el color de la tinta**:
+   **el color del texto**:
    - **A** = azul · **N** = naranja · **B** = blanco
 6. Al terminar, buscá el archivo `.csv` que quedó en la carpeta
    `data/`, al lado del script, y **subilo ya** a la tarea **Stroop de
@@ -36,7 +36,7 @@ línea) y mirá cómo lo hace alguien al lado.
 
 ## Para pensar mientras esperan a lxs demás
 
-1. ¿Qué te costó más, la parte en que la palabra y la tinta coincidían
+1. ¿Qué te costó más, la parte en que la palabra y su color coincidían
    o en la que no? ¿Cuánto más, en milisegundos?
 2. ¿Cuántos trials hiciste? ¿Cómo lo sabés?
 3. Si tuvieras que armar esta tarea, ¿qué **cambia** de un trial a otro
@@ -201,7 +201,7 @@ Un `.psyexp` que corre de punta a punta y deja un CSV en `data/`.
 
 ---
 
-# Consigna 2 — Tu propio experimento
+# Consigna 2 — Su propio experimento
 
 **Cuándo:** día 1, 15:25.
 **Modalidad:** de a dos.

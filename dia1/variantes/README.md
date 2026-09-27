@@ -1,4 +1,4 @@
-# Tu propio experimento — las variantes
+# Su propio experimento — las variantes
 
 El menú de la Consigna 2. Cada pareja convierte su Stroop en otra
 tarea: la estructura queda igual (instrucciones, bucle de trial y

@@ -50,7 +50,7 @@ del error.
 | 13:00 | Almuerzo |
 | 14:00 | Práctica: feedback, sonido y datos |
 | 15:00 | Diseños que escalan |
-| 15:25 | Práctica: tu propio experimento |
+| 15:25 | Práctica: su propio experimento |
 | 16:40 | Del laboratorio al navegador |
 
 **Día 2, jueves 1/10 — ejecutar, sincronizar y analizar (9:30 a 17:00)**
