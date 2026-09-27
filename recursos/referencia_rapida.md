@@ -1,7 +1,7 @@
 # PsychoPy en una página
 
-> Para imprimir en una hoja, doble faz, y repartir el día 1.
-> CSAN 2026 · Juan Kamienkowski y Octavio Castro
+> La hoja de referencia rápida del curso: una cara para construir, otra
+> para código y datos. CSAN 2026 · Juan Kamienkowski y Octavio Castro
 
 ---
 
