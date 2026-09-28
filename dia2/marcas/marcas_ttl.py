@@ -47,27 +47,27 @@ from psychopy import core, event, logging, visual
 
 from puerto_marcas import TriggerPort
 
-BACKEND = "simulado"
-TRIGGER_TIMING = "despues_del_flip"
+BACKEND = "serial"
+TRIGGER_TIMING = "antes_del_flip"
 GAP_MODE = "segundos"
 
-SERIAL_PORT = "COM3"
-SERIAL_BAUDRATE = 9600
-SERIAL_SIGNAL = "break"
-PARALLEL_ADDRESS = 0x0378
-
-N_FLASHES = 40
+N_FLASHES = 100
 FLASH_FRAMES = 12
 GAP_FRAMES = 30
 GAP_SECONDS_RANGE = (0.4, 0.8)
-PULSE_DURATION = 0.005
-TRIGGER_CODE = 1
+PULSE_DURATION = 0.05
+TRIGGER_CODE = 255
+
+SERIAL_PORT = "COM3"
+SERIAL_BAUDRATE = 115200
+SERIAL_SIGNAL = "break"
+PARALLEL_ADDRESS = 0x0378
 
 FULLSCREEN = True
 WINDOW_SIZE = (1280, 720)
 BACKGROUND_COLOUR = "black"
 PATCH_SIZE = 0.25
-PATCH_POSITION = (-0.82, 0.42)
+PATCH_POSITION = (-0.82, -0.42)
 
 OUTPUT_DIR = Path(__file__).resolve().parent / "data"
 OUTPUT_NAME = "marcas_ttl"
@@ -292,7 +292,7 @@ def main(
         win,
         trigger_port,
         f"Demo de marcas TTL — {trigger_timing}, {gap_mode}\n\n"
-        f"{n_flashes} destellos en la esquina superior izquierda.\n"
+        f"{n_flashes} destellos en la esquina inferior izquierda.\n"
         "Poné ahí el sensor de luz.\n\n"
         "Espacio para empezar · Escape para salir",
     )

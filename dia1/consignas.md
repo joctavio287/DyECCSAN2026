@@ -18,7 +18,7 @@ Cada consigna está escrita para leerse sola, sin depender de haber escuchado la
    `dia1/stroop_minimo/stroop_min.py`.
 3. Apretá **Run** (el triángulo verde).
 4. En el diálogo, en `participant` poné el código que te dimos al
-   entrar (`sub-01`, `sub-02`…). **No pongas tu nombre.**
+   entrar (`001`, `002`…). **No pongas tu nombre.**
 5. Hacé la tarea: aparece una palabra escrita en un color y respondés
    **el color de la letra**:
    - **A** = azul · **N** = naranja · **B** = blanco

@@ -20,7 +20,9 @@ se ve cuánto tarda el sonido en salir después de pedirlo. La constante
 
 Usa el backend de audio de Psychtoolbox (PTB), que es el que permite
 agendar. Con ``BACKEND = "simulado"`` corre sin ningún cable.
-
+Es MUY IMPORTANTE SELECCIONAR EL DISPOSITIVO CORRECTO POR DONDE SALDRA 
+EL AUDIO: DISTINTOS DRIVERS DISTINTAS LATENCIAS.
+En Windows, Realtek >> MME
     python marcas_audio.py
 """
 
@@ -33,22 +35,25 @@ from psychopy import prefs
 
 prefs.hardware["audioLib"] = ["ptb"]
 
+from time import sleep
+
 from psychopy import core, logging, sound, visual
 
 from marcas_ttl import save_rows, show_instructions
 from puerto_marcas import TriggerPort
 
-BACKEND = "simulado"
-AUDIO_TIMING = "inmediato"
+BACKEND = "serial"
+AUDIO_TIMING = "agendado"
+
 
 SERIAL_PORT = "COM3"
-SERIAL_BAUDRATE = 9600
+SERIAL_BAUDRATE = 115200
 SERIAL_SIGNAL = "break"
 PARALLEL_ADDRESS = 0x0378
 PULSE_DURATION = 0.005
 TRIGGER_CODE = 2
 
-N_BEEPS = 20
+N_BEEPS = 50
 BEEP_FREQUENCY = 1000
 BEEP_DURATION = 0.2
 SCHEDULE_AHEAD = 0.1
@@ -58,7 +63,7 @@ FULLSCREEN = True
 WINDOW_SIZE = (1280, 720)
 BACKGROUND_COLOUR = "black"
 PATCH_SIZE = 0.25
-PATCH_POSITION = (-0.82, 0.42)
+PATCH_POSITION = (-0.82, -0.42)
 
 OUTPUT_DIR = Path(__file__).resolve().parent / "data"
 OUTPUT_NAME = "marcas_audio"

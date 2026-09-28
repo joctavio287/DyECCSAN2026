@@ -61,10 +61,10 @@ data/sub-07_stroop_2026-09-30_10h15.23.456.csv
 - Si todxs escriben `test` en el diálogo, los archivos no se pisan
   (la hora es distinta), pero es imposible saber quién es quién.
 - Nada de nombres y apellidos: es un dato personal viajando en el
-  nombre del archivo. Códigos (`sub-01`, `sub-02`…) y la
+  nombre del archivo. Números (`001`, `002`…) y la
   correspondencia, si hace falta, guardada aparte.
-- Los ceros a la izquierda importan: `sub-01 … sub-12` ordena bien;
-  `sub-1 … sub-12` pone `sub-10` antes que `sub-2`.
+- Los ceros a la izquierda importan: `001 … 027` ordena bien;
+  `1 … 27` pone `10` antes que `2`.
 - En un experimento nuevo, el Builder 2026 propone en `participant` un
   número al azar de seis dígitos: hay que reemplazarlo por el código.
 

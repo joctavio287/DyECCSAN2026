@@ -11,9 +11,10 @@ Cada consigna está escrita para leerse sola, sin depender de haber escuchado la
 
 1. Cada pareja deja su experimento abierto en el Builder, en su
    computadora, listo para correr.
-2. En el pizarrón está qué experimentos te toca correr: dos o tres de
-   otras parejas. Andá a sus computadoras.
-3. Corré con **tu** código de participante (`sub-XX`). Hacé la tarea en
+2. Tu pareja corre los experimentos de la pareja anterior y de la
+   siguiente, en ronda (en el pizarrón: B corre A y C; A corre la
+   última y B). Andá a sus computadoras.
+3. Corré con **tu** código de participante (`007`, por ejemplo). Hacé la tarea en
    serio: son los datos de otra persona.
 4. No hace falta subir nada: el CSV queda en la carpeta `data/` de lxs
    autorxs.
