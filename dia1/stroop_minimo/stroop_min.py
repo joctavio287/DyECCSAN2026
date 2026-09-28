@@ -47,7 +47,7 @@ QUIT_KEY = "escape"
 INSTRUCTIONS = (
     "TAREA STROOP\n\n"
     "Va a aparecer una palabra escrita en un color.\n"
-    "Respondé el COLOR DEL TEXTO, no la palabra.\n\n"
+    "Respondé el COLOR DE LA LETRA, no la palabra.\n\n"
     "    A = azul      N = naranja      B = blanco\n\n"
     "Respondé lo más rápido que puedas sin equivocarte.\n\n"
     "Presioná la barra espaciadora para empezar."

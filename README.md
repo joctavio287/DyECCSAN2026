@@ -3,8 +3,9 @@
 **CSAN 2026** · Curso pre-congreso de la Sociedad Argentina de
 Investigación en Neurociencias · 30 de septiembre y 1 de octubre
 
-**Juan Kamienkowski** y **Octavio Castro**, Laboratorio de Inteligencia
-Artificial Aplicada (ICC, UBA–CONICET). PsychoPy Ambassadors.
+**Juan Kamienkowski**, **Octavio Castro**, **Ramón Igarreta** y
+**Gustavo Verón**, Laboratorio de Inteligencia Artificial Aplicada
+(ICC, UBA–CONICET).
 
 ---
 
@@ -18,8 +19,9 @@ No hace falta saber git.
    nombre, y **fuera** de OneDrive, Google Drive o Dropbox (por ejemplo
    `C:\psychopy_curso\` o `~/psychopy_curso/`).
 
-Los materiales se van completando durante el curso: **bajá el ZIP de
-nuevo al empezar cada día.**
+**Se baja una sola vez**: están los dos días, con las diapositivas en
+PDF. Lo único que se baja aparte, el jueves, son los datos que genera
+la clase el miércoles: un `datos_clase.zip` en el Classroom.
 
 ## Antes del primer día
 
@@ -33,25 +35,30 @@ del error.
 | Carpeta | Qué tiene |
 |---|---|
 | [`instalacion/`](instalacion/) | La guía de instalación y el archivo de verificación |
-| [`dia1/`](dia1/) | Las consignas y los experimentos del día 1 |
-| `dia2/` | Se publica al terminar el día 1 |
+| [`dia1/`](dia1/) | Las diapositivas, las consignas y los experimentos del día 1 |
+| [`dia2/`](dia2/) | Las diapositivas, las consignas, los demos y el análisis del día 2 |
 | [`recursos/`](recursos/) | La hoja de referencia rápida y el recursero: papers, paradigmas ya hechos, videos, cursos |
 
 ## Cronograma
 
-**Día 1, miércoles 30/9 — diseñar y construir (9:30 a 18:00)**
+**Día 1, miércoles 30/9 — diseñar y construir (9:30 a 18:30)**
 
 | Hora | |
 |---|---|
 | 9:30 | Bienvenida y correr el Stroop mínimo |
 | 10:00 | Diseño experimental |
 | 10:45 | PsychoPy |
+| 11:15 | Café |
 | 11:35 | Práctica: el Stroop en Builder |
-| 13:00 | Almuerzo |
+| 12:30 | Almuerzo |
+| 13:30 | Práctica: el Stroop en Builder (sigue) |
 | 14:00 | Práctica: feedback, sonido y datos |
-| 15:00 | Diseños que escalan |
+| 15:00 | Del Stroop a un experimento real |
 | 15:25 | Práctica: su propio experimento |
+| 16:20 | Café |
 | 16:40 | Del laboratorio al navegador |
+| 17:40 | Cierre y puesta en común |
+| 18:30 | Fin del día |
 
 **Día 2, jueves 1/10 — ejecutar, sincronizar y analizar (9:30 a 17:00)**
 
@@ -59,13 +66,18 @@ del error.
 |---|---|
 | 9:30 | Práctica: ejecución cruzada |
 | 10:05 | Buenas prácticas y validación: timing |
+| 10:50 | Café |
 | 11:05 | Entornos de ejecución |
 | 11:25 | Sincronización y hardware |
 | 12:10 | Extender PsychoPy con código |
-| 13:00 | Almuerzo |
+| 12:30 | Almuerzo |
+| 13:30 | Extender PsychoPy con código (práctica) |
 | 14:00 | Revisión de resultados y archivos de datos |
 | 14:30 | Práctica: leer y analizar los datos de la clase |
-| 16:20 | Asesoramiento de proyectos propios |
+| 15:40 | Café |
+| 15:55 | El efecto Stroop de la clase |
+| 16:20 | Charla sobre sus proyectos y cierre |
+| 17:00 | Fin del curso |
 
 ## Para seguir después
 

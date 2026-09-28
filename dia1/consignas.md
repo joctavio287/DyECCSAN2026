@@ -20,13 +20,16 @@ Cada consigna está escrita para leerse sola, sin depender de haber escuchado la
 4. En el diálogo, en `participant` poné el código que te dimos al
    entrar (`sub-01`, `sub-02`…). **No pongas tu nombre.**
 5. Hacé la tarea: aparece una palabra escrita en un color y respondés
-   **el color del texto**:
+   **el color de la letra**:
    - **A** = azul · **N** = naranja · **B** = blanco
 6. Al terminar, buscá el archivo `.csv` que quedó en la carpeta
    `data/`, al lado del script, y **subilo ya** a la tarea **Stroop de
    la clase** del Classroom.
 
 Esos archivos son los datos que vamos a analizar mañana entre todxs.
+
+Este experimento está escrito en código (Coder), no en el Builder: el
+Builder lo vas a armar vos, desde cero, a partir de las 11:35.
 
 ## Si no funciona
 
@@ -48,7 +51,8 @@ línea) y mirá cómo lo hace alguien al lado.
 
 # Consigna 1 — El Stroop en Builder
 
-**Cuándo:** partes A a C a las 11:35; partes D y E a las 14:00.
+**Cuándo:** partes A y B a las 11:35; parte C a las 13:30, después del
+almuerzo; partes D y E a las 14:00.
 **Modalidad:** guiada, todxs al mismo tiempo; de a dos si hace falta.
 
 ## Objetivo
@@ -120,14 +124,14 @@ carpeta que `condiciones.csv`**, y armá tres rutinas.
 
 ---
 
-## Parte C — El bucle (20 min)
+## Parte C — El bucle (20 min, después del almuerzo)
 
 - **Insert Loop**, envolviendo **solo** la rutina `trial`.
 - *Name* = `trials` · *loopType* = `random` · *nReps* = `4`
 - *Conditions* = `condiciones.csv` (con **Browse**, así queda con la
   ruta correcta).
 
-### Puntos de control antes del almuerzo
+### Puntos de control a las 14:00
 
 - [ ] La pantalla de instrucciones espera la barra espaciadora
 - [ ] La palabra cambia de trial a trial, y el color también
@@ -139,7 +143,7 @@ every repeat** y no *constant*. Es el error número uno.
 
 ---
 
-## Parte D — Feedback y sonido (35 min, después del almuerzo)
+## Parte D — Feedback y sonido (35 min)
 
 Agregá una rutina `feedback` **después** de `trial`, **dentro** del
 bucle (el bucle tiene que envolver las dos).
@@ -221,7 +225,7 @@ cambian las condiciones, el estímulo y las teclas.
 | **Simon** | Un cuadrado azul o naranja a la izquierda o a la derecha; se responde el color | ¿Se tarda más cuando el lado no coincide con la tecla? |
 | **Flanker** | Cinco flechas; se responde hacia dónde apunta la del medio | ¿Se tarda más cuando las de los costados apuntan al revés? |
 | **Auditiva** | Dos tonos: ¿el segundo es más agudo o más grave? | ¿Cuánto se acierta según la diferencia en Hz? |
-| **Orientación** | Una rejilla de rayas que aparece 200 ms, inclinada | ¿Cuánto se acierta según el ángulo? |
+| **Orientación** | Un gabor (un parche de rayas) que aparece 200 ms, inclinado | ¿Cuánto se acierta según el ángulo? |
 | **Propia** | Si traen una idea y entra en la misma estructura | La que elijan |
 
 Cada variante tiene su `condiciones.csv` listo en
@@ -263,7 +267,8 @@ answer* sigue siendo `$correct_key`.
 - `respuesta`: *Start* 1.4
 - En la rutina `feedback`, borrá el bip: se confunde con los tonos
 
-**Orientación — Grating** `rejilla`
+**Orientación — Grating** `gabor` (un grating con máscara gaussiana es
+un gabor)
 - *Texture* = `sin` · *Mask* = `gauss` · *Size* = `(0.4, 0.4)`
 - *Spatial frequency* = `20`
 - *Orientation* = `orientacion` · **set every repeat**
@@ -302,8 +307,9 @@ Agregale práctica y test con bucles anidados, como en
 
 ## Objetivo
 
-Dejar tu experimento listo para correr en otra máquina, y revisar qué
-habría que cambiar para que corra en un navegador.
+Dejar tu experimento listo para que mañana lo corran otras personas en
+tu computadora, y revisar qué habría que cambiar para que corra en un
+navegador.
 
 ## Parte A — ¿Cruza a JavaScript? (15 min)
 
@@ -314,85 +320,47 @@ habría que cambiar para que corra en un navegador.
 3. Si algún componente de código usa `import`, anotalo: en el navegador
    no hay Python, y eso no cruza.
 
-## Parte B — Preparar la carpeta para la ejecución cruzada (15 min)
+## Parte B — Dejarlo listo en tu computadora (15 min)
 
 1. Tu carpeta tiene que quedar con **solo** el `.psyexp` y los CSV de
-   condiciones. Borrá la carpeta `data/` y cualquier `*_lastrun.py`.
+   condiciones. Borrá la carpeta `data/` de las pruebas y cualquier
+   `*_lastrun.py`: así, mañana, lo único que hay en `data/` son los
+   datos de lxs demás.
 2. Renombrala `pareja_XX_variante` (el número de pareja está en el
    pizarrón).
-3. Comprimila en un `.zip` y subila a la carpeta **experimentos** del
-   Drive del curso (el link está en el pizarrón y en el Classroom).
-4. Creá, en la carpeta **datos** del mismo Drive, una carpeta con el
-   mismo nombre: ahí te van a dejar los CSV mañana.
+3. Escribí en un papel, al lado de la computadora, cómo se responde:
+   las teclas y qué significa cada una.
 
 ## Parte C — Probar en limpio (10 min)
 
-Bajá el `.zip` de **otra** pareja, descomprimilo en una carpeta nueva y
-correlo. Si no abre, avisales ahora y no mañana a las 9:30.
+Que una persona de **otra** pareja corra tu experimento en tu
+computadora, como si fuera mañana, con su código de participante.
+Mirá sin ayudar: si algo no se entiende, arreglalo hoy. Después borrá
+ese CSV de prueba.
 
 ---
 
-# Consigna 7 — Ficha de tu proyecto
+# Consigna 7 — Preguntas sobre tu proyecto
 
-**Cuándo:** se reparte al cierre del día 1; se usa en el asesoramiento
-del día 2, a las 16:20.
+**Cuándo:** se presentan al cierre del día 1; se charlan el día 2, a
+las 16:20, con quien quiera.
 **Modalidad:** individual o por grupo de investigación.
 
-Traela **completa**. Con la ficha llena, diez minutos de consulta
-rinden lo que sin ella rinde una hora.
+No es una hoja para entregar: son las preguntas que conviene traer
+pensadas para charlar sobre tu proyecto. Con las respuestas en la
+cabeza, diez minutos de charla rinden lo que sin ellas rinde una hora.
 
----
-
-**Nombre / grupo:** ______________________________________________
-
-**1. La pregunta.** ¿Qué querés averiguar? Una frase, sin
-tecnicismos.
-
-______________________________________________________________________
-
-**2. Un trial.** Dibujá la secuencia de un trial con sus tiempos.
-
-```
-┌──────────────────────────────────────────────────────────────┐
-│                                                              │
-│                                                              │
-│                                                              │
-└──────────────────────────────────────────────────────────────┘
-```
-
-**3. Lo que varía.** ¿Qué cambia entre trials? Cada ítem va a ser una
-columna del archivo de condiciones.
-
-- ____________________________________________________________
-- ____________________________________________________________
-- ____________________________________________________________
-
-**4. Lo que se mide.** ¿Qué registrás en cada trial? ¿En qué unidades?
-
-- ____________________________________________________________
-- ____________________________________________________________
-
-**5. Diseño.** ¿Cuántas condiciones? ¿Cuántos trials por condición?
-¿Cuántxs participantes? ¿Intra o entre sujetos? ¿Hay bloques?
-
-______________________________________________________________________
-
-**6. Dónde corre.** ☐ Laboratorio ☐ Online ☐ Ambos
-¿De qué tamaño es el efecto que esperás, en ms? ¿Qué precisión temporal
-necesita?
-
-______________________________________________________________________
-
-**7. Hardware.** ☐ Nada ☐ EEG ☐ Eyetracker ☐ fMRI ☐ Caja de botones
-☐ Otro: __________________
-
-Si marcaste algo: ¿ya tienen el equipo? ¿Alguien lo usó antes en tu
-laboratorio?
-
-______________________________________________________________________
-
-**8. El obstáculo.** ¿Qué es lo que **no** sabés cómo hacer? Sé
-específicx: acá es donde la consulta rinde.
-
-______________________________________________________________________
-______________________________________________________________________
+1. **La pregunta.** ¿Qué querés averiguar? Una frase, sin
+   tecnicismos.
+2. **Un trial.** ¿Cuál es la secuencia de un trial, con sus tiempos?
+3. **Lo que varía.** ¿Qué cambia entre trials? Cada ítem va a ser una
+   columna del archivo de condiciones.
+4. **Lo que se mide.** ¿Qué registrás en cada trial? ¿En qué unidades?
+5. **Diseño.** ¿Cuántas condiciones? ¿Cuántos trials por condición?
+   ¿Cuántxs participantes? ¿Intra o entre sujetos? ¿Hay bloques?
+6. **Dónde corre.** ¿Laboratorio, online o ambos? ¿De qué tamaño es el
+   efecto que esperás, en ms? ¿Qué precisión temporal necesita?
+7. **Hardware.** ¿EEG, eyetracker, fMRI, caja de botones, otro? ¿Ya
+   tienen el equipo? ¿Alguien lo usó antes en tu laboratorio?
+8. **El obstáculo.** ¿Qué es lo que **no** sabés cómo hacer? Sé
+   específicx: ahí es donde la charla rinde.

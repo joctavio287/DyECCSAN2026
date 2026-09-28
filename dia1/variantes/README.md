@@ -10,7 +10,7 @@ las teclas.
 | `simon/` | Un cuadrado azul o naranja a la izquierda o a la derecha; se responde el color | Efecto Simon: más lento cuando el lado no coincide con la tecla | **Polygon**, con posición `(pos_x, 0)` |
 | `flanker/` | Cinco flechas; se responde la del medio | Efecto flanker: más lento cuando las de los costados apuntan al revés | Text |
 | `auditiva/` | Dos tonos; ¿el segundo es más agudo o más grave? | Acierto según la diferencia en Hz | **Sound** ×2, con `$frecuencia` |
-| `orientacion/` | Una rejilla que aparece 200 ms, inclinada | Acierto según el ángulo | **Grating**, con orientación `orientacion` |
+| `orientacion/` | Un gabor (un parche de rayas) que aparece 200 ms, inclinado | Acierto según el ángulo | **Grating**, con orientación `orientacion` |
 
 Todas usan **Z** (izquierda / grave) y **M** (derecha / agudo), y la
 columna de la respuesta correcta se llama `correct_key` en todas, así

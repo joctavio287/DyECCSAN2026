@@ -10,7 +10,7 @@ explicación (Consigna 0).
 2. Apretar **Ejecutar** (la flecha verde)
 3. Completar `participant` con el código asignado (`sub-01`, `sub-02`…).
    **No poner el nombre propio.**
-4. Responder **el color del texto**, no la palabra:
+4. Responder **el color de la letra**, no la palabra:
    **A** = azul · **N** = naranja · **B** = blanco
 5. `Escape` sale en cualquier momento
 
