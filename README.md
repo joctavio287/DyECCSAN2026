@@ -48,14 +48,14 @@ del error.
 | 9:30 | Bienvenida y correr el Stroop mínimo |
 | 10:00 | Diseño experimental |
 | 10:45 | PsychoPy |
-| 11:15 | Café |
+| 11:15 | Recreo |
 | 11:35 | Práctica: el Stroop en Builder |
 | 12:30 | Almuerzo |
 | 13:30 | Práctica: el Stroop en Builder (sigue) |
 | 14:00 | Práctica: feedback, sonido y datos |
 | 15:00 | Del Stroop a un experimento real |
 | 15:25 | Práctica: su propio experimento |
-| 16:20 | Café |
+| 16:20 | Recreo |
 | 16:40 | Del laboratorio al navegador |
 | 17:40 | Cierre y puesta en común |
 | 18:30 | Fin del día |
@@ -66,7 +66,7 @@ del error.
 |---|---|
 | 9:30 | Práctica: ejecución cruzada |
 | 10:05 | Buenas prácticas y validación: timing |
-| 10:50 | Café |
+| 10:50 | Recreo |
 | 11:05 | Entornos de ejecución |
 | 11:25 | Sincronización y hardware |
 | 12:10 | Extender PsychoPy con código |
@@ -74,10 +74,11 @@ del error.
 | 13:30 | Extender PsychoPy con código (práctica) |
 | 14:00 | Revisión de resultados y archivos de datos |
 | 14:30 | Práctica: leer y analizar los datos de la clase |
-| 15:40 | Café |
-| 15:55 | El efecto Stroop de la clase |
-| 16:20 | Charla sobre sus proyectos y cierre |
+| 15:40 | Recreo |
+| 15:55 | Discusión y cierre |
+| 16:20 | Charla sobre sus proyectos (opcional) |
 | 17:00 | Fin del curso |
+| Después | Charla de Gabriel Mindlin y Sara Solla: "Dimensionalidad del cerebro" |
 
 ## Para seguir después
 
