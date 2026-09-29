@@ -12,9 +12,11 @@ cómo cablearlo, el guion, los respaldos— en
 | `puerto_marcas.py` | `TriggerPort`, el puerto por el que salen las marcas, compartido por los dos demos |
 | `probar_usb_ttl.py` | Manda marcas sueltas, sin PsychoPy: para probar el pincho, el LED y el osciloscopio |
 | `arduino_usb2ttl.ino` | Sketch que convierte un Arduino en una caja de triggers de 8 líneas |
+| `circuito_*.svg` | Los tres circuitos del demo, con lo que muestra cada canal |
 
-Los tres scripts corren sin ningún hardware con `BACKEND = "simulado"`:
-las marcas van al `.log` y a un CSV en `data/`, al lado del script.
+Los scripts de los demos corren sin ningún hardware con
+`BACKEND = "simulado"`, y `probar_usb_ttl.py` con `DRY_RUN = True`: las
+marcas van al `.log` y a un CSV en `data/`, al lado del script.
 
 ---
 
@@ -37,45 +39,61 @@ Sirve perfecto para medir el timing. Lo que **no** sirve es enchufarlo
 a la entrada de triggers de un EEG, que espera un código estable en
 paralelo: para eso está el Arduino o una caja comercial.
 
-### El LED que muestra la marca
+En el pincho **la lógica es al revés**: la línea está siempre en alto y
+la marca la lleva a 0 V. Es cosa del puerto serie, no de toda marca
+TTL: las cajas de triggers de un EEG suelen mandar pulsos positivos.
+Por eso, en el osciloscopio, invertimos los dos canales: así la marca y
+la luz se ven hacia arriba.
 
-Para que el aula vea la marca, un LED en la línea, **entre VCC y TX**:
+### Circuito 1: la marca, en el canal 1
+
+![Circuito 1](circuito_marca.svg)
+
+Para que el aula vea la marca, un LED **entre 5 V y TX**:
 
 ```
-VCC ── resistencia ── pata larga del LED ── pata corta ── TX
+5 V ── 270 Ω ── pata larga del LED ── pata corta ── TX
 ```
 
-- En reposo TX está en alto, igual que VCC: el LED está apagado.
+- En reposo TX está en alto, igual que los 5 V: el LED está apagado.
 - Con la marca TX baja: el LED se prende mientras dura el estímulo.
-- Resistencia de 470 Ω a 1 kΩ con VCC de 5 V (220–470 Ω con 3.3 V):
-  unos pocos mA, que la línea maneja sin deformar la señal que ve el
-  osciloscopio.
+- Con 270 Ω pasan unos 10 mA, que la línea maneja sin deformar la
+  señal que ve el osciloscopio.
 - Si queda al revés (TX → resistencia → LED → GND), funciona igual
   pero invertido: prendido en reposo, apagado con la marca.
 
-### Los sensores
+La punta del CH1 va a TX y su masa al GND del pincho.
 
-| Canal | Demo visual | Demo de audio |
-|---|---|---|
-| **CH1** | La línea de la marca (TX y GND del pincho) | Igual |
-| **CH2** | Un sensor de luz apoyado sobre el parche | La salida de auriculares |
+### Circuito 2: el sensor de luz, en el canal 2
 
-**Sensor de luz.** Lo ideal es un fotodiodo (BPW34 o similar). Si no
-hay, **un LED común funciona como sensor**: pata larga a la punta del
-CH2, pata corta a la masa, sin pila ni resistencia. Los de 5 mm
-transparentes, rojos o verdes, suelen andar mejor. Apoyarlo contra la
-esquina superior izquierda de la pantalla, taparlo con cinta negra o un
-trapo, y el brillo de la pantalla al máximo.
+![Circuito 2](circuito_sensor_luz.svg)
 
-**Audio.** Un cable de 3.5 mm con cocodrilos, o uno cortado: la punta
-(canal izquierdo) a la punta del CH2 y la malla a la masa. Volumen al
-50–70 %.
+Un fototransistor apoyado sobre el parche blanco, en la esquina inferior
+izquierda de la pantalla: el colector a los 5 V del pincho con una
+resistencia de 10 kΩ, el emisor al GND, y la punta del CH2 en el
+colector. A oscuras no conduce y el colector queda cerca de 5 V; **con
+luz conduce y el voltaje baja**. Taparlo con cinta negra o un trapo, y
+el brillo de la pantalla al máximo.
+
+Si no hay fototransistor, sirve un fotodiodo (BPW34 o similar) o
+incluso un LED común: pata larga a la punta del CH2, pata corta a la
+masa, sin resistencia. La señal es de décimas de volt.
+
+### Circuito 3: el audio, en el canal 2
+
+![Circuito 3](circuito_audio.svg)
+
+Para `marcas_audio.py`, el CH2 toma directo la salida de auriculares:
+un cable de audio enchufado en la notebook, y la punta del CH2 en la
+punta del miniplug (canal izquierdo; sirve también el anillo, el
+derecho). La masa sigue siendo la del pincho, porque es la misma
+notebook, y la malla queda sin conectar. El CH1, como en el circuito 1.
 
 ---
 
 ## Demo visual — `marcas_ttl.py`
 
-Muestra un parche blanco en la esquina superior izquierda —el que mira
+Muestra un parche blanco en la esquina inferior izquierda —el que mira
 el sensor de luz— y manda una marca en cada aparición. Con
 `SERIAL_SIGNAL = "break"` la marca dura lo que dura el parche, así que
 el LED se prende junto con el estímulo.
@@ -87,17 +105,21 @@ el LED se prende junto con el estímulo.
 
 Lo que hay que mirar no es tanto la distancia entre los flancos como
 **cuánto varía de un destello al otro**. Después del flip la luz llega
-a una distancia fija de la marca (unos pocos ms, que son el retardo
-del propio monitor y del USB, y se corrigen restando). Antes del flip,
-con `GAP_MODE = "segundos"`, la distancia salta entre 0 y un frame
-entero en cada destello, y eso no se corrige con nada.
+a una distancia fija de la marca: en nuestra prueba, unos 14 ms, porque
+el parche está abajo y el monitor dibuja de arriba hacia abajo. Es un
+retraso constante, y se corrige restando. Antes del flip, con
+`GAP_MODE = "segundos"`, la distancia salta en cada destello en un
+rango de un frame entero (entre 14 y 31 ms en la prueba), y eso no se
+corrige con nada.
 
-**En el OWON:** CH1 a 2 V/div, CH2 empezando en 100 mV/div. Base de
-tiempo 5 ms/div. Trigger por flanco en CH1, pendiente de **bajada**,
-nivel a mitad de camino entre reposo y marca, modo **Normal**, con el
-punto de trigger corrido a la izquierda. Si tiene persistencia (menú
-*Display*), activarla: antes del flip los flancos de luz forman una
-nube de un frame de ancho; después, una línea.
+**En el OWON:** CH1 a 2 V/div; CH2, con el fototransistor, empezando en
+1 o 2 V/div. Los dos canales invertidos. Base de tiempo 5 ms/div.
+Trigger por flanco en CH1, pendiente de **bajada**: el trigger mira la
+señal original, aunque el canal se vea invertido. Nivel a mitad de
+camino entre reposo y marca, modo **Normal**, con el punto de trigger
+corrido a la izquierda. Si tiene persistencia (menú *Display*),
+activarla: antes del flip los flancos de luz forman una nube de un
+frame de ancho; después, una línea.
 
 Si la señal de luz tiene un serrucho fino, es el PWM del brillo de la
 pantalla: con el brillo al máximo suele desaparecer.
@@ -107,11 +129,11 @@ pantalla: con el brillo al máximo suele desaparecer.
 | `BACKEND` | `"simulado"` | `"serial"` para el pincho, `"parallel"` para puerto paralelo |
 | `SERIAL_PORT` | `"COM3"` | `"/dev/ttyUSB0"` en Linux; `probar_usb_ttl.py` lista los que hay |
 | `SERIAL_SIGNAL` | `"break"` | Ver la tabla del pincho |
-| `TRIGGER_TIMING` | `"despues_del_flip"` | Antes o después del flip |
+| `TRIGGER_TIMING` | `"antes_del_flip"` | Antes o después del flip |
 | `GAP_MODE` | `"segundos"` | Espera al azar en segundos (el código cae en cualquier punto del ciclo del monitor) o en frames (queda atado al refresco) |
-| `N_FLASHES` | `40` | Cuántos destellos |
+| `N_FLASHES` | `100` | Cuántos destellos |
 | `FLASH_FRAMES` | `12` | Duración del destello: 200 ms a 60 Hz, suficiente para ver el LED |
-| `PATCH_POSITION` | `(-0.82, 0.42)` | Dónde va el parche |
+| `PATCH_POSITION` | `(-0.82, -0.42)` | Dónde va el parche |
 
 ---
 
@@ -141,8 +163,8 @@ tomarlo en cuenta.
 
 | Constante | Por defecto | Qué cambia |
 |---|---|---|
-| `AUDIO_TIMING` | `"inmediato"` | Cómo se pide el sonido |
-| `N_BEEPS` | `20` | Cuántos bips |
+| `AUDIO_TIMING` | `"agendado"` | Cómo se pide el sonido |
+| `N_BEEPS` | `50` | Cuántos bips |
 | `BEEP_FREQUENCY` | `1000` | Frecuencia, en Hz |
 | `BEEP_DURATION` | `0.2` | Duración del bip y de la marca |
 | `SCHEDULE_AHEAD` | `0.1` | Con cuánta anticipación se agenda en `"agendado"` |
@@ -151,8 +173,9 @@ tomarlo en cuenta.
 
 ## Antes del curso: probar el montaje
 
-1. **El pincho solo.** `probar_usb_ttl.py` con `SIGNAL = "break"`:
-   cada 0.8 s, TX tiene que bajar 200 ms y el LED prenderse. Si no
+1. **El pincho solo.** `probar_usb_ttl.py` con `SIGNAL = "break"` y
+   `DRY_RUN = False`: cada `INTERVAL` segundos, TX tiene que bajar
+   durante `PULSE_DURATION` y el LED prenderse. Si no
    aparece nada, revisar que la punta esté en TX y no en RX, el nombre
    del puerto y, en Linux, que el usuario esté en el grupo `dialout`.
    Si `"break"` no anda en ese pincho, probar `"dtr"` o `"rts"` (si

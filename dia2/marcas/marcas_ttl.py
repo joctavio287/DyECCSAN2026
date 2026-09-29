@@ -47,7 +47,7 @@ from psychopy import core, event, logging, visual
 
 from puerto_marcas import TriggerPort
 
-BACKEND = "serial"
+BACKEND = "simulado"
 TRIGGER_TIMING = "antes_del_flip"
 GAP_MODE = "segundos"
 

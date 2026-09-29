@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 610" width="760" height="610" font-family="Helvetica, Arial, sans-serif" fill="#222">
+  <title>Circuito 3: el audio, en el canal 2 del osciloscopio</title>
+  <defs>
+    <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#222"/>
+    </marker>
+  </defs>
+  <rect width="760" height="610" fill="#fff"/>
+
+  <text x="24" y="36" font-size="20" font-weight="700">Circuito 3 · El audio, en el canal 2</text>
+  <text x="24" y="60" font-size="14" fill="#555">Para marcas_audio.py: el canal 2 toma directo la salida de auriculares. El canal 1, como en el circuito 1.</text>
+
+  <!-- pincho USB-TTL -->
+  <rect x="24" y="110" width="150" height="190" rx="8" fill="#f2f2f2" stroke="#222" stroke-width="2"/>
+  <text x="38" y="136" font-size="14" font-weight="700">Pincho USB-TTL</text>
+  <text x="38" y="154" font-size="12" fill="#555">(a la notebook por USB)</text>
+  <g font-size="13" text-anchor="end">
+    <text x="164" y="184">5V</text>
+    <text x="164" y="214">TXD</text>
+    <text x="164" y="244">RXD</text>
+    <text x="164" y="274">GND</text>
+  </g>
+
+  <!-- cables del pincho -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g opacity="0.45">
+      <path d="M174 180 H204" stroke="#555" stroke-width="6"/>
+      <path d="M174 180 H204" stroke="#E69F00" stroke-width="4"/>
+      <path d="M174 210 H204" stroke="#555" stroke-width="6"/>
+      <path d="M174 210 H204" stroke="#F0E442" stroke-width="4"/>
+      <path d="M174 240 H204" stroke="#555" stroke-width="6"/>
+      <path d="M174 240 H204" stroke="#009E73" stroke-width="4"/>
+    </g>
+    <path d="M174 270 H600" stroke="#555" stroke-width="6"/>
+    <path d="M174 270 H600" stroke="#0072B2" stroke-width="4"/>
+  </g>
+  <g font-size="12" fill="#777">
+    <text x="212" y="184">naranja · al circuito 1</text>
+    <text x="212" y="214">amarillo · al circuito 1</text>
+    <text x="212" y="244">verde · sin usar</text>
+    <text x="182" y="290">azul</text>
+  </g>
+
+  <!-- cable de audio con su miniplug -->
+  <text x="190" y="94" font-size="12" fill="#555">cable de audio: la otra punta, enchufada</text>
+  <text x="190" y="108" font-size="12" fill="#555">en la salida de auriculares de la notebook</text>
+  <path d="M196 140 H290" fill="none" stroke="#555" stroke-width="7" stroke-linecap="round"/>
+  <rect x="290" y="124" width="60" height="32" rx="6" fill="#888" stroke="#222" stroke-width="2"/>
+  <rect x="350" y="132" width="50" height="16" fill="#d6d6d6" stroke="#222" stroke-width="1.5"/>
+  <rect x="400" y="132" width="6" height="16" fill="#222"/>
+  <rect x="406" y="132" width="40" height="16" fill="#d6d6d6" stroke="#222" stroke-width="1.5"/>
+  <rect x="446" y="132" width="6" height="16" fill="#222"/>
+  <path d="M452 132 H486 L498 140 L486 148 H452 Z" fill="#d6d6d6" stroke="#222" stroke-width="1.5"/>
+  <g stroke="#999" stroke-width="1">
+    <line x1="375" y1="150" x2="375" y2="194"/>
+    <line x1="426" y1="150" x2="426" y2="180"/>
+    <line x1="472" y1="150" x2="472" y2="166"/>
+  </g>
+  <g font-size="11" fill="#555">
+    <text x="380" y="198">malla (masa): sin conectar</text>
+    <text x="431" y="184">anillo (canal derecho)</text>
+    <text x="477" y="170">punta (canal izquierdo)</text>
+  </g>
+
+  <!-- punta del osciloscopio -->
+  <path d="M498 140 H600" fill="none" stroke="#222" stroke-width="2.5"/>
+  <circle cx="498" cy="140" r="4.5"/>
+
+  <!-- osciloscopio -->
+  <rect x="600" y="110" width="140" height="190" rx="8" fill="#f2f2f2" stroke="#222" stroke-width="2"/>
+  <circle cx="600" cy="140" r="4.5" fill="#fff" stroke="#222" stroke-width="2"/>
+  <circle cx="600" cy="270" r="4.5" fill="#fff" stroke="#222" stroke-width="2"/>
+  <text x="610" y="144" font-size="12" fill="#555">punta</text>
+  <text x="610" y="274" font-size="12" fill="#555">masa</text>
+  <text x="676" y="200" font-size="14" font-weight="700" text-anchor="middle">Osciloscopio</text>
+  <text x="676" y="220" font-size="14" text-anchor="middle">CH2</text>
+
+  <!-- qué se ve -->
+  <line x1="24" y1="325" x2="736" y2="325" stroke="#ddd" stroke-width="1.5"/>
+  <text x="24" y="354" font-size="15" font-weight="700">Qué muestra el osciloscopio</text>
+  <g stroke="#bbb" stroke-width="1.2" stroke-dasharray="4 4">
+    <line x1="330" y1="368" x2="330" y2="500"/>
+    <line x1="400" y1="368" x2="400" y2="500"/>
+  </g>
+  <text x="24" y="392" font-size="13" font-weight="700">CH1: la marca</text>
+  <text x="24" y="408" font-size="11" fill="#555">invertido, como en el circuito 1</text>
+  <path d="M210 410 H330 V380 H700" fill="none" stroke="#0072B2" stroke-width="2.5"/>
+  <text x="24" y="466" font-size="13" font-weight="700">CH2: el audio</text>
+  <text x="24" y="482" font-size="11" fill="#555">el bip de 1000 Hz</text>
+  <path d="M210 470 H400 q3 -30 6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0 t6 0" fill="none" stroke="#0072B2" stroke-width="1.8"/>
+  <line x1="334" y1="508" x2="396" y2="508" stroke="#222" stroke-width="1.5" marker-start="url(#flecha)" marker-end="url(#flecha)"/>
+  <text x="365" y="526" font-size="12" font-weight="700" text-anchor="middle">retraso del audio</text>
+
+  <g font-size="12" fill="#444">
+    <text x="24" y="558">La masa del canal 2 va al GND del pincho, como la del canal 1: es la misma notebook. Sirve cualquiera</text>
+    <text x="24" y="574">de los dos canales del miniplug. Este retraso no queda en ningún archivo: se mide así, una vez por equipo.</text>
+  </g>
+  <text x="24" y="598" font-size="11" fill="#777">Los colores de los cables son los del pincho que usamos. En otros cambian: guíense por lo que dice impreso al lado de cada pin.</text>
+</svg>

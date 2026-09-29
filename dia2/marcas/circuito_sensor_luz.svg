@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 660" width="760" height="660" font-family="Helvetica, Arial, sans-serif" fill="#222">
+  <title>Circuito 2: el sensor de luz, en el canal 2 del osciloscopio</title>
+  <defs>
+    <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#222"/>
+    </marker>
+    <marker id="flecha-luz" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E69F00"/>
+    </marker>
+  </defs>
+  <rect width="760" height="660" fill="#fff"/>
+
+  <text x="24" y="36" font-size="20" font-weight="700">Circuito 2 · El sensor de luz, en el canal 2</text>
+  <text x="24" y="60" font-size="14" fill="#555">Un fototransistor apoyado sobre el parche blanco que muestra marcas_ttl.py</text>
+
+  <!-- pincho USB-TTL -->
+  <rect x="24" y="110" width="150" height="190" rx="8" fill="#f2f2f2" stroke="#222" stroke-width="2"/>
+  <text x="38" y="136" font-size="14" font-weight="700">Pincho USB-TTL</text>
+  <text x="38" y="154" font-size="12" fill="#555">(a la notebook por USB)</text>
+  <g font-size="13" text-anchor="end">
+    <text x="164" y="184">5V</text>
+    <text x="164" y="214">TXD</text>
+    <text x="164" y="244">RXD</text>
+    <text x="164" y="274">GND</text>
+  </g>
+
+  <!-- cables del pincho -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g opacity="0.45">
+      <path d="M174 210 H204" stroke="#555" stroke-width="6"/>
+      <path d="M174 210 H204" stroke="#F0E442" stroke-width="4"/>
+      <path d="M174 240 H204" stroke="#555" stroke-width="6"/>
+      <path d="M174 240 H204" stroke="#009E73" stroke-width="4"/>
+    </g>
+    <path d="M174 180 H380 V200" stroke="#555" stroke-width="6"/>
+    <path d="M174 180 H380 V200" stroke="#E69F00" stroke-width="4"/>
+    <path d="M174 270 H210 V380 H600" stroke="#555" stroke-width="6"/>
+    <path d="M174 270 H210 V380 H600" stroke="#0072B2" stroke-width="4"/>
+  </g>
+  <g font-size="12" fill="#777">
+    <text x="182" y="172">naranja</text>
+    <text x="212" y="214">amarillo · al circuito 1</text>
+    <text x="212" y="244">verde · sin usar</text>
+    <text x="218" y="398">azul</text>
+  </g>
+
+  <!-- resistencia -->
+  <rect x="370" y="200" width="20" height="60" fill="#fff" stroke="#222" stroke-width="2.5"/>
+  <text x="400" y="235" font-size="14">10 kΩ</text>
+  <path d="M380 260 V285" fill="none" stroke="#222" stroke-width="2.5"/>
+
+  <!-- fototransistor -->
+  <circle cx="370" cy="325" r="26" fill="#fff" stroke="#222" stroke-width="2.5"/>
+  <g fill="none" stroke="#222" stroke-width="2.5">
+    <path d="M362 311 V339" stroke-width="3.5"/>
+    <path d="M362 317 L380 305 V285"/>
+    <path d="M380 345 V380"/>
+    <path d="M362 333 L380 345" marker-end="url(#flecha)"/>
+  </g>
+  <text x="404" y="330" font-size="14" font-weight="700">fototransistor</text>
+  <text x="388" y="300" font-size="11" fill="#555">colector</text>
+  <text x="388" y="366" font-size="11" fill="#555">emisor</text>
+
+  <!-- pantalla con el parche -->
+  <rect x="226" y="300" width="74" height="52" rx="3" fill="#333"/>
+  <rect x="232" y="320" width="26" height="26" fill="#fff"/>
+  <text x="263" y="278" font-size="12" fill="#555" text-anchor="middle">pantalla, con</text>
+  <text x="263" y="293" font-size="12" fill="#555" text-anchor="middle">el parche abajo</text>
+  <g stroke="#E69F00" stroke-width="2" marker-end="url(#flecha-luz)">
+    <line x1="264" y1="324" x2="338" y2="318"/>
+    <line x1="264" y1="338" x2="338" y2="334"/>
+  </g>
+
+  <!-- punta del osciloscopio -->
+  <path d="M380 285 H600" fill="none" stroke="#222" stroke-width="2.5"/>
+  <circle cx="380" cy="285" r="4.5"/>
+  <circle cx="380" cy="380" r="4.5"/>
+
+  <!-- osciloscopio -->
+  <rect x="600" y="250" width="140" height="150" rx="8" fill="#f2f2f2" stroke="#222" stroke-width="2"/>
+  <circle cx="600" cy="285" r="4.5" fill="#fff" stroke="#222" stroke-width="2"/>
+  <circle cx="600" cy="380" r="4.5" fill="#fff" stroke="#222" stroke-width="2"/>
+  <text x="610" y="289" font-size="12" fill="#555">punta</text>
+  <text x="610" y="384" font-size="12" fill="#555">masa</text>
+  <text x="676" y="326" font-size="14" font-weight="700" text-anchor="middle">Osciloscopio</text>
+  <text x="676" y="346" font-size="14" text-anchor="middle">CH2</text>
+
+  <!-- qué se ve -->
+  <line x1="24" y1="425" x2="736" y2="425" stroke="#ddd" stroke-width="1.5"/>
+  <text x="24" y="454" font-size="15" font-weight="700">Qué muestra el canal 2</text>
+  <g stroke="#bbb" stroke-width="1.2" stroke-dasharray="4 4">
+    <line x1="360" y1="468" x2="360" y2="580"/>
+    <line x1="500" y1="468" x2="500" y2="580"/>
+  </g>
+  <text x="24" y="492" font-size="13" font-weight="700">en el cable</text>
+  <text x="24" y="508" font-size="11" fill="#555">5 V a oscuras, baja con luz</text>
+  <path d="M210 480 H360 V510 H500 V480 H700" fill="none" stroke="#222" stroke-width="2.5"/>
+  <text x="24" y="552" font-size="13" font-weight="700">en el osciloscopio</text>
+  <text x="24" y="568" font-size="11" fill="#555">con el CH2 invertido</text>
+  <path d="M210 570 H360 V540 H500 V570 H700" fill="none" stroke="#0072B2" stroke-width="2.5"/>
+  <text x="430" y="532" font-size="12" font-weight="700" text-anchor="middle">luz · aparece el estímulo</text>
+
+  <g font-size="12" fill="#444">
+    <text x="24" y="608">A oscuras el fototransistor no conduce y el colector queda en 5 V; con luz conduce y el voltaje baja.</text>
+    <text x="24" y="624">Con el canal invertido, arriba es luz. Se mide la distancia entre la subida del canal 1 y la del canal 2.</text>
+  </g>
+  <text x="24" y="648" font-size="11" fill="#777">Los colores de los cables son los del pincho que usamos. En otros cambian: guíense por lo que dice impreso al lado de cada pin.</text>
+</svg>

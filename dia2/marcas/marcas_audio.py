@@ -42,7 +42,7 @@ from psychopy import core, logging, sound, visual
 from marcas_ttl import save_rows, show_instructions
 from puerto_marcas import TriggerPort
 
-BACKEND = "serial"
+BACKEND = "simulado"
 AUDIO_TIMING = "agendado"
 
 

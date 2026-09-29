@@ -41,7 +41,7 @@ PULSE_BYTE = 0x00
 PULSE_DURATION = 1
 N_PULSES = 10
 INTERVAL = 2
-DRY_RUN = False
+DRY_RUN = True
 
 VALID_SIGNALS = ("byte", "break", "dtr", "rts")
 
