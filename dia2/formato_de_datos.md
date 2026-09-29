@@ -17,9 +17,9 @@ con **el mismo nombre y distinta extensión**:
 
 ```
 data/
-├── sub-07_stroop_2026-09-30_10h15.23.456.csv      ← el que se analiza
-├── sub-07_stroop_2026-09-30_10h15.23.456.psydat   ← respaldo completo
-└── sub-07_stroop_2026-09-30_10h15.23.456.log      ← cronología de todo
+├── 007_stroop_2026-09-30_10h15.23.456.csv      ← el que se analiza
+├── 007_stroop_2026-09-30_10h15.23.456.psydat   ← respaldo completo
+└── 007_stroop_2026-09-30_10h15.23.456.log      ← cronología de todo
 ```
 
 | Extensión | Qué es | Cuándo se usa |
@@ -49,7 +49,7 @@ Plantilla por defecto, en **Settings → Data → Data filename**:
 que produce:
 
 ```
-data/sub-07_stroop_2026-09-30_10h15.23.456.csv
+data/007_stroop_2026-09-30_10h15.23.456.csv
      └─┬──┘ └──┬─┘ └──────────┬──────────┘
        │       │              └── fecha y hora, con milisegundos
        │       └───────────────── nombre del experimento
@@ -197,7 +197,7 @@ Si el experimento corre online, los CSV quedan en el servidor:
 
 - Aparecen columnas propias de PsychoJS (navegador, resolución).
 - El campo `participant` puede venir de la URL
-  (`?participant=sub-07`), que es lo recomendable para no depender de
+  (`?participant=007`), que es lo recomendable para no depender de
   que la gente escriba bien.
 - Hay sesiones incompletas: gente que cerró la pestaña. Decidir qué
   hacer con ellas **antes** de mirarlas.
@@ -213,7 +213,7 @@ from pathlib import Path
 import pandas as pd
 
 # --- un solo archivo -------------------------------------------------
-trials = pd.read_csv('data/sub-07_stroop_2026-09-30_10h15.23.456.csv')
+trials = pd.read_csv('data/007_stroop_2026-09-30_10h15.23.456.csv')
 
 trials.shape          # 38 filas en el Stroop de Builder: 36 trials + 2
 trials.columns        # para clasificarlas en A, B, C y D

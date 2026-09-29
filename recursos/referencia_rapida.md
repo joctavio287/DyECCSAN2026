@@ -135,7 +135,7 @@ thisExp.addData('mi_columna', valor)
 ## El archivo de datos
 
 ```
-data/sub-07_stroop_2026-09-30_10h15.23.456.csv
+data/007_stroop_2026-09-30_10h15.23.456.csv
      └─┬──┘ └──┬─┘ └──────────┬──────────┘
  participante  experimento   fecha y hora
 ```
