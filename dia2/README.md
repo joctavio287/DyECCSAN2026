@@ -3,7 +3,7 @@
 | Qué | Dónde | Cuándo |
 |---|---|---|
 | Las diapositivas | [`diapositivas_dia2.pdf`](diapositivas_dia2.pdf) | Todo el día |
-| Las consignas del día | [`consignas.md`](consignas.md) | Todo el día |
+| Las consignas del día | [`consignas.pdf`](consignas.pdf), o [`consignas.md`](consignas.md) | Todo el día |
 | Medí tu máquina | [`medir_maquina/`](medir_maquina/) | 10:30 |
 | Los demos de marcas TTL y audio | [`marcas/`](marcas/) | 11:45 |
 | El formato de los archivos de datos | [`formato_de_datos.md`](formato_de_datos.md) | 14:25 |

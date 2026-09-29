@@ -19,9 +19,10 @@ No hace falta saber git.
    nombre, y **fuera** de OneDrive, Google Drive o Dropbox (por ejemplo
    `C:\psychopy_curso\` o `~/psychopy_curso/`).
 
-**Se baja una sola vez**: están los dos días, con las diapositivas en
-PDF. Lo único que se baja aparte, el jueves, son los datos que genera
-la clase el miércoles: un `datos_clase.zip` en el Classroom.
+**Se baja una sola vez**: están los dos días, con las diapositivas y
+las consignas en PDF. Lo único que se baja aparte, el jueves, son los
+datos que genera la clase el miércoles: un `datos_clase.zip` en el
+Classroom.
 
 ## Antes del primer día
 
