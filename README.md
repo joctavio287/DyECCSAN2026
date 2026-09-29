@@ -60,25 +60,24 @@ del error.
 | 17:40 | Cierre y puesta en común |
 | 18:30 | Fin del día |
 
-**Día 2, jueves 1/10 — ejecutar, sincronizar y analizar (9:30 a 17:00)**
+**Día 2, jueves 1/10 — ejecutar, sincronizar y analizar (9:30 a 17:45)**
 
 | Hora | |
 |---|---|
 | 9:30 | Práctica: ejecución cruzada |
-| 10:05 | Buenas prácticas y validación: timing |
-| 10:50 | Recreo |
-| 11:05 | Entornos de ejecución |
-| 11:25 | Sincronización y hardware |
-| 12:10 | Extender PsychoPy con código |
+| 10:30 | Buenas prácticas y validación: timing |
+| 11:15 | Recreo |
+| 11:25 | Entornos de ejecución |
+| 11:45 | Sincronización y hardware |
 | 12:30 | Almuerzo |
-| 13:30 | Extender PsychoPy con código (práctica) |
-| 14:00 | Revisión de resultados y archivos de datos |
-| 14:30 | Práctica: leer y analizar los datos de la clase |
-| 15:40 | Recreo |
-| 15:55 | Discusión y cierre |
-| 16:20 | Charla sobre sus proyectos (opcional) |
-| 17:00 | Fin del curso |
-| Después | Charla de Gabriel Mindlin y Sara Solla: "Dimensionalidad del cerebro" |
+| 13:30 | Extender PsychoPy con código |
+| 14:25 | Revisión de resultados y archivos de datos |
+| 15:00 | Práctica: leer y analizar los datos de la clase |
+| 16:15 | Recreo |
+| 16:30 | Discusión y cierre |
+| 17:00 | Charla sobre sus proyectos (opcional) |
+| 17:45 | Fin del curso |
+| 18:00 | Charla de Gabriel Mindlin y Sara Solla: "Dimensionalidad del cerebro" |
 
 ## Para seguir después
 

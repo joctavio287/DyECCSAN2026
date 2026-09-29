@@ -343,7 +343,7 @@ ese CSV de prueba.
 # Consigna 7 — Preguntas sobre tu proyecto
 
 **Cuándo:** se presentan al cierre del día 1; se charlan el día 2, a
-las 16:20, con quien quiera.
+las 17:00, con quien quiera.
 **Modalidad:** individual o por grupo de investigación.
 
 No es una hoja para entregar: son las preguntas que conviene traer

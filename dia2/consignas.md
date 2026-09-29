@@ -27,8 +27,8 @@ Después del almuerzo cada pareja va a abrir los CSV que le generaron.
 
 # Consigna 5 — Una marca en el momento justo
 
-**Cuándo:** día 2: la explicación a las 12:10 y la práctica a las
-13:30, después del almuerzo.
+**Cuándo:** día 2, 13:30, después del almuerzo: primero la
+explicación y después la práctica.
 **Modalidad:** de a dos, sobre tu experimento.
 **Referencia:** `dia2/marcas/` y el demo de la mañana.
 
@@ -99,7 +99,7 @@ línea `TRIGGER` y la línea de arriba, donde el estímulo se prende
 
 # Consigna 6 — Analizar los datos de la clase
 
-**Cuándo:** día 2, 14:30.
+**Cuándo:** día 2, 15:00.
 **Modalidad:** de a dos.
 **Archivo de trabajo:** `dia2/analisis/ejercicio_dia2.py`
 
@@ -175,5 +175,5 @@ comentario por qué conviene guardarla además de los datos crudos.
 2. ¿Los aciertos también muestran efecto Stroop, o solo el RT?
 3. Lo mismo con los datos del experimento propio.
 
-**Solución:** se proyecta a las 15:55. Intentalo antes: equivocarse
+**Solución:** se proyecta a las 16:30. Intentalo antes: equivocarse
 acá es la parte que más enseña.
