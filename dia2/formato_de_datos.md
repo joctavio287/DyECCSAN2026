@@ -275,5 +275,8 @@ Antes de analizar nada, sobre los datos crudos:
 - [ ] No hay RT negativos ni mayores al máximo que permite la tarea
 - [ ] `.started` y `.stopped` dan las duraciones que se pidieron
 
-Si alguno falla, **el problema es del experimento, no del análisis**.
+Si alguno falla, **se busca la causa antes de analizar**: el análisis
+no la arregla. Suele estar en el experimento o en cómo se corrió (un
+archivo de prueba, alguien que corrió dos veces); a veces en la persona
+(aciertos en el azar) o en cómo se leyeron los archivos.
 Vale más media hora acá que un mes de análisis sobre datos rotos.

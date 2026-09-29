@@ -198,7 +198,7 @@ clean.groupby(['participant', 'congruent'])['respuesta.rt'].mean()
 Pantalla completa · cerrá todo · precargá los estímulos ·
 medí el frame rate real
 
-## Marcas TTL — las seis reglas
+## Marcas TTL — cinco detalles
 
 ```python
 # En Coder: primero el flip, después la marca
@@ -215,18 +215,20 @@ if estimulo.status == STARTED and marca_pendiente:
 thisExp.addData('trigger_code', codigo)      # guardala también
 ```
 
-1. El reloj de la compu **no puede** medirse a sí mismo
+1. El reloj de la compu **no puede** medirse a sí mismo: el montaje se
+   **valida una vez** con un instrumento de afuera (fotodiodo +
+   osciloscopio), y sirve para siempre
 2. El trigger va **después** del `flip`
-3. La línea **vuelve a cero**, o dos eventos iguales se ven como uno
+3. La línea del dispositivo que manda las marcas **se fuerza a 0**
+   después de cada una, o dos eventos iguales se ven como uno
 4. **Un código por condición** (10 = congruente, 20 = incongruente)
-5. Se **valida una vez** con fotodiodo + osciloscopio, y sirve para
-   siempre
-6. Lo que el experimento decide, el experimento lo **guarda**
+5. Lo que el experimento decide, el experimento lo **guarda**
 
 En Builder: componente **Parallel Port Out** o **Serial Out**.
 *Start data* acepta `$trigger_code` — sale del CSV, igual que `$word`.
 
-⚠️ Arduino saca 5 V; muchos amplificadores esperan 3.3 V.
+⚠️ Conocé las tensiones, impedancias y corrientes de entrada y salida
+de cada equipo.
 ⚠️ Entre la compu y alguien conectado a un equipo: **optoacoplador**.
 ⚠️ Masa común, o no se mide nada.
 

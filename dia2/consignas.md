@@ -18,6 +18,8 @@ Cada consigna está escrita para leerse sola, sin depender de haber escuchado la
    serio: son los datos de otra persona.
 4. No hace falta subir nada: el CSV queda en la carpeta `data/` de lxs
    autorxs.
+5. Si terminás antes, seguí con los experimentos de otras parejas
+   hasta que se termine el tiempo: cada uno suma participantes.
 
 Después del almuerzo cada pareja va a abrir los CSV que le generaron.
 

@@ -112,8 +112,9 @@ retraso constante, y se corrige restando. Antes del flip, con
 rango de un frame entero (entre 14 y 31 ms en la prueba), y eso no se
 corrige con nada.
 
-**En el OWON:** CH1 a 2 V/div; CH2, con el fototransistor, empezando en
-1 o 2 V/div. Los dos canales invertidos. Base de tiempo 5 ms/div.
+**En el OWON:** los dos canales invertidos y a 500 mV/div, corridos
+para que entren en pantalla (en nuestro montaje, offset de 6.50 div en
+CH1 y 9.04 div en CH2). Base de tiempo 5 ms/div.
 Trigger por flanco en CH1, pendiente de **bajada**: el trigger mira la
 señal original, aunque el canal se vea invertido. Nivel a mitad de
 camino entre reposo y marca, modo **Normal**, con el punto de trigger
