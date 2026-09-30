@@ -2,7 +2,7 @@
 
 | Qué | Dónde | Cuándo |
 |---|---|---|
-| Las diapositivas | [`diapositivas_dia2.pdf`](diapositivas_dia2.pdf) | Todo el día |
+| Las diapositivas | [`diapositivas_dia2.pdf`](diapositivas_dia2.pdf), o [`diapositivas_dia2.html`](diapositivas_dia2.html) para verlas en el navegador, una por una | Todo el día |
 | Las consignas del día | [`consignas.pdf`](consignas.pdf), o [`consignas.md`](consignas.md) | Todo el día |
 | Medí tu máquina | [`medir_maquina/`](medir_maquina/) | 10:30 |
 | Los demos de marcas TTL y audio | [`marcas/`](marcas/) | 11:45 |
