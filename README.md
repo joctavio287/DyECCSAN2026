@@ -38,7 +38,7 @@ del error.
 | [`instalacion/`](instalacion/) | La guía de instalación y el archivo de verificación |
 | [`dia1/`](dia1/) | Las diapositivas, las consignas y los experimentos del día 1 |
 | [`dia2/`](dia2/) | Las diapositivas, las consignas, los demos y el análisis del día 2 |
-| [`recursos/`](recursos/) | La hoja de referencia rápida y el recursero: papers, paradigmas ya hechos, videos, cursos |
+| [`recursos/`](recursos/) | La hoja de referencia rápida y el recursero, en PDF y en Markdown: papers, paradigmas ya hechos, videos, cursos |
 
 ## Cronograma
 
