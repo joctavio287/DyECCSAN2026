@@ -8,4 +8,5 @@
 | Los demos de marcas TTL y audio | [`marcas/`](marcas/) | 11:45 |
 | El formato de los archivos de datos | [`formato_de_datos.md`](formato_de_datos.md) | 14:25 |
 | El análisis de los datos de la clase | [`analisis/`](analisis/) | 15:00 |
+| El Stroop, versión final: precarga, marca y frames perdidos | [`stroop_final/`](stroop_final/) | De modelo para su experimento |
 | Qué reportar en Métodos | [`reporte_metodos.md`](reporte_metodos.md) | Al cierre |

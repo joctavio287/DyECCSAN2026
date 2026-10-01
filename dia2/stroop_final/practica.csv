@@ -1,0 +1,7 @@
+word,ink_name,ink_colour,congruent,correct_key,trigger_code
+AZUL,azul,#0072B2,1,a,11
+NARANJA,naranja,#E69F00,1,n,12
+BLANCO,blanco,#FFFFFF,1,b,13
+AZUL,naranja,#E69F00,0,n,22
+AZUL,blanco,#FFFFFF,0,b,23
+NARANJA,azul,#0072B2,0,a,21
