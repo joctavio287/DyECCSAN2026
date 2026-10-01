@@ -77,8 +77,8 @@ del Builder.
 ## Parte C — Verificarlo (15 min)
 
 Corré el experimento y abrí el `.log` que quedó en `data/`. Buscá una
-línea `TRIGGER` y la línea de arriba, donde el estímulo se prende
-(`autoDraw = True`).
+línea `TRIGGER` y, justo abajo, la línea donde el estímulo se prende
+(`autoDraw = True`): tienen la misma hora, o casi.
 
 - [ ] Hay **una** línea `TRIGGER` por trial, ni cero ni dos
 - [ ] El código cambia según la condición
