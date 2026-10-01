@@ -1,0 +1,5 @@
+archivo_imagen,archivo_sonido,tono,flecha,congruent,correct_key
+estimulos/flecha_arriba.jpg,estimulos/tono_agudo.wav,agudo,arriba,1,up
+estimulos/flecha_abajo.jpg,estimulos/tono_agudo.wav,agudo,abajo,0,up
+estimulos/flecha_arriba.jpg,estimulos/tono_grave.wav,grave,arriba,0,down
+estimulos/flecha_abajo.jpg,estimulos/tono_grave.wav,grave,abajo,1,down
